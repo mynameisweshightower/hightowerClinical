@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^hightowerclinical.com
+RewriteRule ^(.*) http://mynameisweshightower.github.io/hightowerClinical/$1 [P]
