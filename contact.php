@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hightower Clinical - Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#A2AFBF">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
@@ -11,8 +12,10 @@
   <body>
 	<section class="navigation">
 		<div class="logo">
-			LOGO HERE
-		</div> <!-- /logo -->
+			<a href="index.html">
+				<img src="images/hightowerClinLogoVer1.png">
+			</a>
+		</div><!-- /logo -->
 		<nav class="navlist">
 			<a href="about.html">About</a>
 			<a href="services.html">Services</a>
@@ -79,6 +82,13 @@
 		}
 		?>
 	</section>
+	<section class="site-footer">
+		<div class="site-footer-wrapper">
+			<div class="site-footer-owner">&copy; 2016 Hightower Clinical</div>
+
+			<div class="site-footer-credits">Developed by <a href="http://kiopah.com" target="_blank">Wes Hightower</a></div>
+		</div> <!-- /.site-footer-wrapper -->
+	</section><!-- /.footer -->
   
   <script src="/scripts/ga.js"></script>
   </body>

@@ -21,6 +21,11 @@ body
   background-color: #A2AFBF;
 }
  
+input, textarea
+{
+	color:#000;
+}
+ 
 .logo img 
 {
     width: 210px;
@@ -32,20 +37,11 @@ body
     background-color: #A2AFBF;
 }
 
-@media screen and (min-width: 64em) 
-{
-  .navigation
-  {
-    max-width: 64rem;
-	margin:0 auto;
-  }
-}
-
 .navlist 
 {
     position: absolute;
     right: 0px;
-    top: 0px;
+    bottom: 10px;
 }
 
 .navlist a 
@@ -89,99 +85,19 @@ a:hover
   border-color: rgba(255, 255, 255, 0.3); 
 }
 
-@media screen and (min-width: 64em) 
-{
-  .btn 
-  {
-    padding: 0.75rem 1rem; 
-  } 
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) 
-{
-  .btn 
-  {
-    padding: 0.6rem 0.9rem;
-    font-size: 0.9rem;
-  } 
-}
-
-@media screen and (max-width: 42em) 
-{
-  .btn 
-	{
-		display: block;
-		width: 100%;
-		padding: 0.75rem;
-		font-size: 0.9rem; 
-	}
-    .btn + .btn 
-	{
-      margin-top: 1rem;
-      margin-left: 0; 
-	}
-}
-
 .page-header 
 {
+	border:1px solid black;
 	color: #fff;
     text-align: center;
     background-color: #A2AFBF;
 	background: radial-gradient(ellipse at center, #A2AFBF 0%,#717579 100%);
 }
 
-@media screen and (min-width: 64em) 
-{
-  .page-header 
-  {
-    padding: 5rem 6rem; 
-  } 
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) 
-{
-  .page-header 
-  {
-    padding: 3rem 4rem; 
-  } 
-}
-
-@media screen and (max-width: 42em) 
-{
-  .page-header 
-  {
-    padding: 2rem 1rem; 
-  } 
-}
-
 .project-name 
 {
   margin-top: 0;
   margin-bottom: 0.1rem; 
-}
-
-@media screen and (min-width: 64em) 
-{
-  .project-name 
-  {
-    font-size: 3.25rem; 
-  } 
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) 
-{
-  .project-name 
-  {
-    font-size: 2.25rem; 
-  } 
-}
-
-@media screen and (max-width: 42em) 
-{
-  .project-name 
-  {
-    font-size: 1.75rem; 
-  } 
 }
 
 .project-tagline 
@@ -191,38 +107,16 @@ a:hover
   opacity: 0.7; 
 }
 
-@media screen and (min-width: 64em) 
-{
-  .project-tagline 
-  {
-    font-size: 1.25rem; 
-  } 
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) 
-{
-  .project-tagline 
-  {
-    font-size: 1.15rem; 
-  } 
-}
-
-@media screen and (max-width: 42em) 
-{
-  .project-tagline 
-  {
-    font-size: 1rem; 
-  } 
-}
-
 .main-content :first-child 
 {
   margin-top: 0; 
 }
 .main-content img 
 {
-  max-width: 100%; 
+  max-width:100%; 
+  max-height:300px;
 }
+
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 
 {
   margin-top: 2rem;
@@ -233,6 +127,7 @@ a:hover
 .main-content p 
 {
   margin-bottom: 1em; 
+  text-align:center;
 }
 .main-content code 
 {
@@ -359,48 +254,61 @@ a:hover
   border: 0;
 }
 
-@media screen and (min-width: 64em) 
-{
-  .main-content
-  {
-    max-width: 64rem;
-    padding: 2rem 0rem;
-    margin: 0 auto;
-    font-size: 1.1rem; 
-  } 
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) 
-{
-  .main-content
-  {
-    padding: 2rem 4rem;
-    font-size: 1.1rem;
-  } 
-}
-
-@media screen and (max-width: 42em) 
-{
-  .main-content 
-  {
-    padding: 2rem 1rem;
-    font-size: 1rem; 
-  } 
-}
-
 .home-content
 {
-	width:21rem;
+	border:1px solid #CCC;
+	width:31%;
 	display:inline-block;
 	background:#717579;
+	text-align:center;
+}
+
+.home-patients
+{
+	margin:2%;
+}
+
+.sites-content
+{
+	
+}
+
+.sites-content img
+{
+	float:left;
+	margin:0em 1em 1em 0em;
+}
+
+.sites-content p
+{
+	text-align:left;
+}
+.sites-content::after
+{
+	clear:both;
+	height:0px;
+	width:100%;
+	content:'.';
+	display:block;
+	visibility:hidden;
 }
 
 .site-footer 
 {
+  width:100%;
   padding-top: 2rem;
+  padding-bottom:2rem;
   margin-top: 2rem;
   border-top: solid 1px #eff0f1; 
   background:#717579;
+ /* position: absolute;
+  bottom: 0px;*/
+}
+
+.site-footer-wrapper
+{
+	max-width:64rem;
+	margin:0 auto;
 }
 
 .site-footer-owner 
@@ -409,13 +317,47 @@ a:hover
   font-weight: bold; 
 }
 
-.site-footer-credits 
+.site-footer-credits, .site-footer-credits a, .site-footer-credits a:visited
 {
   color: #819198; 
 }
 
 @media screen and (min-width: 64em) 
 {
+  .btn 
+  {
+    padding: 0.75rem 1rem; 
+  } 
+  
+  .navigation
+  {
+    max-width: 64rem;
+	margin:0 auto;
+  }
+  
+  .page-header 
+  {
+    /*padding: 5rem 6rem;*/ 
+  }
+  
+  .project-name 
+  {
+    font-size: 3.25rem; 
+  }
+  
+  .project-tagline 
+  {
+    font-size: 1.25rem; 
+  }
+  
+  .main-content
+  {
+    max-width: 64rem;
+    padding: 2rem 0rem;
+    margin: 0 auto;
+    font-size: 1.1rem; 
+  } 
+  
   .site-footer 
   {
     font-size: 1rem; 
@@ -424,6 +366,33 @@ a:hover
 
 @media screen and (min-width: 42em) and (max-width: 64em) 
 {
+  .btn 
+  {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  
+  .page-header 
+  {
+    padding: 3rem 4rem; 
+  }
+  
+  .project-name 
+  {
+    font-size: 2.25rem; 
+  }
+  
+  .project-tagline 
+  {
+    font-size: 1.15rem; 
+  }
+  
+  .main-content
+  {
+    padding: 2rem 4rem;
+    font-size: 1.1rem;
+  }
+  
   .site-footer 
   {
     font-size: 1rem; 
@@ -432,6 +401,72 @@ a:hover
 
 @media screen and (max-width: 42em) 
 {
+	.btn 
+	{
+		display: block;
+		width: 100%;
+		padding: 0.75rem;
+		font-size: 0.9rem; 
+	}
+	.btn + .btn 
+	{
+		margin-top: 1rem;
+		margin-left: 0; 
+	}
+	
+	.logo
+	{
+		text-align:center;
+		margin-top:10px;
+	}
+	
+	.navlist
+	{
+		position:relative;
+		text-align:center;
+		margin-top:1em;
+	}
+	
+  .page-header 
+  {
+    padding: 2rem 1rem; 
+  }
+	
+  .project-name 
+  {
+    font-size: 1.75rem; 
+  }
+  
+  .project-tagline 
+  {
+    font-size: 1rem; 
+  }
+  
+  .main-content 
+  {
+    padding:0;
+    font-size: 1rem; 
+  } 
+  
+  .home-content
+  {
+    width: 100%;
+    display: block;
+    margin: 1em 0em;
+	padding: 2em 0em;
+  }
+  
+  .home-patients
+  {
+    background: transparent;
+    border: none;
+  }
+  
+  .home-patients h3
+  {
+	  color:#717579;
+  }
+  
   .site-footer 
   {
     font-size: 0.9rem; 

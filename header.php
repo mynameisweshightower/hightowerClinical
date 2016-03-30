@@ -1,5 +1,5 @@
 <html>
 	<head>
-		<title>Hightower Clinical, LLC</title>
+		<title>Hightower Clinical Trial Services</title>
 	</head>
 	<body>
