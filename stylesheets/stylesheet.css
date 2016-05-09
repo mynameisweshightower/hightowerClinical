@@ -10,6 +10,11 @@
   box-sizing: border-box; 
 }
 
+html
+{
+	transition:all 1s;
+}
+
 body 
 {
   padding: 0;
@@ -55,34 +60,43 @@ a
   color: #1e6bb8;
   text-decoration: none; 
 }
+
+#current
+{
+	color:#A2AFBF;
+	background-color:rgba(255, 255, 255, 0.5);
+}
+
+
 a:hover 
 {
     text-decoration: underline; 
 }
 
-.btn 
+.btn
 {
   display: inline-block;
   margin-bottom: 1rem;
   color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(125, 125, 125, 0.9);
   border-color: rgba(255, 255, 255, 0.2);
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s; 
 }
-  .btn + .btn 
-  {
-    margin-left: 1rem; 
-  }
+
+.btn + .btn 
+{
+	margin-left: 1rem; 
+}
 
 .btn:hover 
 {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3); 
+	color: rgba(255, 255, 255, 0.8);
+	text-decoration: none;
+	background-color: rgba(125, 125, 125, 1);
+	border-color: rgba(255, 255, 255, 0.3); 
 }
 
 .page-header 
@@ -96,38 +110,38 @@ a:hover
 
 .project-name 
 {
-  margin-top: 0;
-  margin-bottom: 0.1rem; 
+	margin-top: 0;
+	margin-bottom: 0.1rem; 
 }
 
 .project-tagline 
 {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7; 
+	margin-bottom: 2rem;
+	font-weight: normal;
+	opacity: 0.7; 
 }
 
 .main-content :first-child 
 {
-  margin-top: 0; 
+	margin-top: 0; 
 }
 .main-content img 
 {
-  max-width:100%; 
-  max-height:300px;
+	max-width:100%; 
+	max-height:300px;
 }
 
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 
 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  color: #A2AFBF; 
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	font-weight: normal;
+	color: #FFF; 
 }
 .main-content p 
 {
-  margin-bottom: 1em; 
-  text-align:center;
+	margin-bottom: 1em; 
+	/* text-align:center;*/
 }
 .main-content code 
 {
@@ -254,6 +268,48 @@ a:hover
   border: 0;
 }
 
+.home-head
+{
+	max-width:960px;
+	margin:0 auto;
+	position:relative;
+}
+
+.home-name
+{
+	
+	margin-top:7%;
+	padding:0.25em 0.52em;
+	font-weight:bold;
+	font-size:2em;
+	background:rgba(125, 125, 125, 0.9);
+	display:inline-block;
+	border-radius:0.3rem;
+}
+
+#home-buttons-holder
+{
+	width:100%;
+	margin-top:5%;
+}
+
+#headSlide1
+{
+	background:url('../thermometer-temperature-fever-flu.jpg');
+	background-size:cover;
+	width:100%;
+	max-width:960px;
+	height:50vh;
+	max-height:300px;
+	overflow:hidden;
+	margin:0 auto;
+}
+
+#headSlide1 img
+{
+	width:100%;
+}
+
 .home-content
 {
 	border:1px solid #CCC;
@@ -270,7 +326,7 @@ a:hover
 
 .sites-content
 {
-	
+	border-bottom:2px solid #BC7412;
 }
 
 .sites-content img
@@ -293,6 +349,10 @@ a:hover
 	visibility:hidden;
 }
 
+/*--
+	FOOTER
+---*/
+
 .site-footer 
 {
   width:100%;
@@ -309,19 +369,137 @@ a:hover
 {
 	max-width:64rem;
 	margin:0 auto;
+	position:relative;
+	height:10em;
 }
 
 .site-footer-owner 
 {
   display: block;
-  font-weight: bold; 
+  font-weight: bold;
+  text-align:center;
 }
 
 .site-footer-credits, .site-footer-credits a, .site-footer-credits a:visited
 {
   color: #819198; 
+  text-align:center;
 }
 
+.site-footer-navigation 
+{
+	display:block;
+	text-align:center;
+	margin-bottom:1em;
+
+}
+
+.site-footer-navigation-option a
+{
+	color:#9BC;
+	padding:0.5em 1em;
+	border-left:1px solid white;
+}
+
+.site-footer-navigation-option img
+{
+	width:25px;
+	vertical-align:middle;
+}
+
+.footnav-first a
+{
+	border-left:none;
+/*	border-right:1px solid white;*/
+}
+
+.footnav-last a
+{
+	border-right:none;
+/*	border-left:1px solid white;*/
+}
+
+.site-footer-credits a:hover, .site-footer-credits a:visited
+{
+	text-decoration:line-through;
+}
+
+/*--------------
+	SERVICES
+--------------*/
+
+.service-bullet
+{
+	text-indent:-0.75em;
+}
+
+/*.service-bullet:first-child
+{
+	font-family:Symbol;
+}*/
+
+/*--------------
+	FAQ
+--------------*/
+
+#scroller
+{
+	position:fixed;
+	right:0px;
+	bottom:0px;
+	padding:1em;
+	border:2px solid black;
+}
+
+.faq-picture
+{
+	max-width:400px;
+	height:auto;
+}
+
+.faq-question-holder
+{
+	margin-left:33em;
+}
+
+.faq-question-top
+{
+	margin-bottom:1em;
+	display:block;
+	/*text-align:right;*/
+}
+
+.faq-answer
+{
+	text-align:left;
+}
+
+.faq-question-bottom
+{
+	font-weight:bold;
+	color:#FFF;
+}
+
+.faq-question-holder ul:last-child
+{
+	margin-bottom:5em;
+}
+
+.faq-picture
+{
+	float:left;
+}
+
+.formInput
+{
+	background:#EEF;
+	border:none;
+	color:#004;
+}
+
+/*--------------
+	RESPONSE
+--------------*/
 @media screen and (min-width: 64em) 
 {
   .btn 
@@ -370,6 +548,12 @@ a:hover
   {
     padding: 0.6rem 0.9rem;
     font-size: 0.9rem;
+  }
+  
+  .navigation, .site-footer-wrapper
+  {
+    width:90%;
+    margin:0 auto;
   }
   
   .page-header 
@@ -471,4 +655,10 @@ a:hover
   {
     font-size: 0.9rem; 
   } 
+  
+  .site-footer-wrapper
+  {
+    width:90%;
+    margin:0 auto;
+  }
 }

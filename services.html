@@ -11,10 +11,15 @@
 </head>
 <body>
 <section class="navigation">
-<div class="logo"><a href="index.html"><img src="images/hightowerClinLogoVer1.png" /> </a></div>
+<div class="logo"><a href="index.html"><img src="images/hightowerClinLogo.png" /> </a></div>
 <!-- /logo -->
 
-<nav class="navlist"><a href="about.html">About</a> <a href="services.html">Services</a> <a href="contact.php">Contact</a></nav>
+	<nav class="navlist">
+		<a href="about.html" alt="About" title="About">About</a> 
+		<a href="services.html" id="current" alt="Services" title="Services">Services</a>
+		<a href="sites.html" alt="Sites" title="Sites">Sites</a>		
+		<a href="contact.php" alt="Contact" title="Contact">Contact</a>
+	</nav>
 <!-- /navlist --></section>
 <!-- /navigation -->
 
@@ -77,12 +82,40 @@ Symbol">&middot;<span style="font-stretch: normal; font-size: 7pt; font-family: 
 Symbol">&middot;<span style="font-stretch: normal; font-size: 7pt; font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]-->Record Archiving<o:p></o:p></li>
 </ul>
 </div>
-</section>
+
+<div class="current-studies">
+	View current studies <a href="currentStudies.html">here</a>.
+</div>
+
+<div class="join-study">
+	If you would like to join a study, you can do so <a href="joinStudy.php">here</a>.
+</div>
+
+<div class="privacy-policy">
+	Your privacy is important to us. We adhere to HIPAA guidelines to protect your privacy. View our <a href="privacyStatement.html">Privacy Statement</a> for more information.
+</div>
+
+</section> <!-- /.main-content -->
 <section class="site-footer">
 	<div class="site-footer-wrapper">
 		<div class="site-footer-owner">&copy; 2016 Hightower Clinical</div>
 
 		<div class="site-footer-credits">Developed by <a href="http://kiopah.com" target="_blank">Wes Hightower</a></div>
+		
+		<div class="site-footer-navigation">
+			<ul>
+				<li>About </li>
+				<li>Services </li>
+					<ul>
+						<li>Current Studies</li>
+						<li>Join a Study</li>
+						<li>Privacy Statement</li>
+					</ul>
+				<li>Sites</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+		
 	</div> <!-- /.site-footer-wrapper -->
 </section><!-- /.footer -->
 <script src="/scripts/ga.js"></script></body>
